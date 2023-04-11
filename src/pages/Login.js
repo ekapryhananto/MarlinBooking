@@ -4,7 +4,7 @@ import InputDataName from '../components/InputDataName';
 import InputDataPass from '../components/InputDataPass';
 import BottomSign from '../components/BottomSign';
 
-const SignIn = () => {
+const SignIn = ({navigation}) => {
   const [username, setUsername] = useState('');
   const [pass, setPass] = useState('');
 
@@ -52,10 +52,13 @@ const SignIn = () => {
           alignSelf: 'center',
           marginTop: 28.4,
         }}>
-        <Image
-          style={{height: 46.1, width: 46.1, marginHorizontal: 22.44}}
-          source={require('../image6.png')}
-        />
+        <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
+          <Image
+            style={{height: 46.1, width: 46.1, marginHorizontal: 22.44}}
+            source={require('../image6.png')}
+          />
+        </TouchableOpacity>
+
         <Image
           style={{height: 31.61, width: 32.61, marginHorizontal: 22.44}}
           source={require('../image7.png')}
@@ -75,7 +78,7 @@ const SignIn = () => {
 
       <View style={styles.footer}>
         <Text>Don't have account?</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
           <Text style={{fontWeight: 'bold'}}> Sign up</Text>
         </TouchableOpacity>
       </View>

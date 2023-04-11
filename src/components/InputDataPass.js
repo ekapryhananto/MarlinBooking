@@ -5,7 +5,7 @@ const InputDataPass = props => {
   return (
     <View
       style={{
-        // alignSelf: 'center',
+        alignSelf: 'center',
         backgroundColor: 'aqua',
         flexDirection: 'row',
         backgroundColor: '#FFFFFF',

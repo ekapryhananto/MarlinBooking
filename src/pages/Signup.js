@@ -13,7 +13,7 @@ import InputDataphone from '../components/InputDataPhone';
 import InputDataPass from '../components/InputDataPass';
 import BottomSign from '../components/BottomSign';
 
-const SignUp = () => {
+const SignUp = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -35,7 +35,7 @@ const SignUp = () => {
       <BottomSign text="SignUp" color="#2E3283" />
       <View style={styles.footer}>
         <Text>Already have account?</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
           <Text style={{fontWeight: 'bold'}}> Log in</Text>
         </TouchableOpacity>
       </View>
