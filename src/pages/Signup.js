@@ -12,6 +12,7 @@ import InputDataEmail from '../components/InputDataEmail';
 import InputDataphone from '../components/InputDataPhone';
 import InputDataPass from '../components/InputDataPass';
 import BottomSign from '../components/BottomSign';
+import styles from '../components/css';
 
 const SignUp = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -21,7 +22,7 @@ const SignUp = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <Image style={styles.imgLogo} source={require('../logo.png')} />
+      <Image style={styles.imgLogoSignUp} source={require('../logo.png')} />
       <Text style={styles.text}>Create an account</Text>
       <InputDataName state={name} set={setName} placeholder="Name" />
       <InputDataEmail state={email} set={setEmail} placeholder="Email" />
@@ -42,34 +43,5 @@ const SignUp = ({navigation}) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#E5E5E5',
-    flex: 1,
-  },
-  imgLogo: {
-    width: 190.15,
-    height: 44.87,
-    marginTop: 140,
-    alignSelf: 'center',
-  },
-  text: {
-    fontSize: 18,
-    width: 400,
-    textAlign: 'center',
-    marginTop: 18,
-  },
-  footer: {
-    flexDirection: 'row',
-    backgroundColor: 'white',
-    position: 'absolute',
-    bottom: 0,
-    width: '100%',
-    height: 35,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
 
 export default SignUp;

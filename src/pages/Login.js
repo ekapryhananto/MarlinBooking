@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import {View, Image, StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {View, Image, Text, TouchableOpacity} from 'react-native';
 import InputDataName from '../components/InputDataName';
 import InputDataPass from '../components/InputDataPass';
 import BottomSign from '../components/BottomSign';
+import styles from '../components/css';
 
 const SignIn = ({navigation}) => {
   const [username, setUsername] = useState('');
@@ -34,8 +35,12 @@ const SignIn = ({navigation}) => {
           }
         />
       </View>
-      <BottomSign text="Sign in" color="#2E3283" />
-      <TouchableOpacity>
+      <BottomSign
+        onPress={() => navigation.navigate('Home')}
+        text="Sign in"
+        color="#2E3283"
+      />
+      <TouchableOpacity onPress={() => navigation.navigate('ResetPass')}>
         <Text style={styles.resetPas}>Forgot password</Text>
       </TouchableOpacity>
 
@@ -85,47 +90,5 @@ const SignIn = ({navigation}) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#E5E5E5',
-    flex: 1,
-  },
-  imgLogo: {
-    width: 190.15,
-    height: 44.87,
-    marginTop: 95,
-    alignSelf: 'center',
-  },
-  text: {
-    fontSize: 18,
-    width: 400,
-    textAlign: 'center',
-    marginTop: 18,
-  },
-  footer: {
-    flexDirection: 'row',
-    backgroundColor: 'white',
-    position: 'absolute',
-    bottom: 0,
-    width: '100%',
-    height: 35,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  resetPas: {
-    alignSelf: 'center',
-    marginTop: 17,
-    color: '#2E3283',
-  },
-  garis: {
-    justifyContent: 'center',
-    height: 1,
-    width: 93.83,
-    backgroundColor: 'black',
-    alignSelf: 'center',
-    marginHorizontal: 14.69,
-  },
-});
 
 export default SignIn;

@@ -4,6 +4,7 @@ import {Text, TouchableOpacity} from 'react-native';
 const BottomSign = props => {
   return (
     <TouchableOpacity
+      onPress={props.onPress}
       style={{
         backgroundColor: props.color,
         marginTop: 17,
