@@ -4,6 +4,7 @@ import InputDataName from '../components/InputDataName';
 import InputDataPass from '../components/InputDataPass';
 import BottomSign from '../components/BottomSign';
 import styles from '../components/css';
+import BottomNav from '../../BottomNav';
 
 const SignIn = ({navigation}) => {
   const [username, setUsername] = useState('');

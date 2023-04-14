@@ -1,25 +1,28 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from './src/pages/Home';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
-import {Text, View} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
+import ImplementasiLibrary from './src/pages/ImplementasiLibrary';
 
 const Tab = createMaterialBottomTabNavigator();
 
-function SettingsScreen() {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
-
 const BottomNav = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      screenOptions={({route}) => ({
+        tabBarIcon: ({color, size, focused}) => {
+          let iconName;
+
+          if (route.name === 'Home') {
+            iconName = focused ? 'ios-home-sharp' : 'ios-home-outline';
+          } else if (route.name === 'Implementasi') {
+            iconName = focused ? 'ios-albums' : 'ios-albums-outline';
+          }
+          return <Icon name={iconName} size={22} color={color} />;
+        },
+      })}>
       <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Settings" component={SettingsScreen} />
+      <Tab.Screen name="Implementasi" component={ImplementasiLibrary} />
     </Tab.Navigator>
   );
 };

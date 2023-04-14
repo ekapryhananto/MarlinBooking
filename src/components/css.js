@@ -50,7 +50,14 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   bannerHome: {
-    width: 420,
+    height: 218,
+    width: '100%',
+  },
+  mainHome: {
+    backgroundColor: 'white',
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    marginTop: -18,
   },
 });
 
