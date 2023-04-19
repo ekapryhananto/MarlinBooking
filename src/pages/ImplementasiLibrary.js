@@ -10,8 +10,15 @@ import ProgresVieww from './tugas3/ProgesView';
 import Clipboardd from './tugas3/Clipboard';
 import AsyncStoragee from './tugas3/AsyncStorage';
 import Carousell from './tugas3/Carousel';
+import BottomSign from '../components/BottomSign';
+import LinearGradient from 'react-native-linear-gradient';
+import Renderhtml from './tugas3/Renderhtml';
+import Sharee from './tugas3/Share';
+import Skeleton from './tugas3/Skeleton';
+import Webview from './tugas3/Webview';
+import Tooltipp from './tugas3/Tooltipp';
 
-const ImplementasiLibrary = () => {
+const ImplementasiLibrary = ({navigation}) => {
   return (
     <ScrollView style={styles.container}>
       <NetInfoo />
@@ -33,12 +40,40 @@ const ImplementasiLibrary = () => {
       </Text>
       <Carousell />
       <Text style={{fontSize: 20, fontWeight: 'bold', marginTop: 20}}>
-        Net Info
+        Image zoom viewer
       </Text>
-
+      <BottomSign
+        onPress={() => navigation.navigate('Imagezoom')}
+        text="Imagezoom"
+        color="#2E3283"
+      />
       <Text style={{fontSize: 20, fontWeight: 'bold', marginTop: 20}}>
-        Net Info
+        Linear gradient
       </Text>
+      <LinearGradient
+        colors={['#333', '#514EBC']}
+        style={{width: 319, height: 117, alignSelf: 'center'}}
+      />
+      <Text style={{fontSize: 20, fontWeight: 'bold', marginTop: 20}}>
+        Render HTML
+      </Text>
+      <Renderhtml />
+      <Text style={{fontSize: 20, fontWeight: 'bold', marginTop: 20}}>
+        Share
+      </Text>
+      <Sharee />
+      <Text style={{fontSize: 20, fontWeight: 'bold', marginTop: 20}}>
+        Skeleton placeholder
+      </Text>
+      <Skeleton />
+      <Text style={{fontSize: 20, fontWeight: 'bold', marginTop: 20}}>
+        Webview
+      </Text>
+      <Webview />
+      <Text style={{fontSize: 20, fontWeight: 'bold', marginTop: 20}}>
+        Tooltip
+      </Text>
+      <Tooltipp />
     </ScrollView>
   );
 };

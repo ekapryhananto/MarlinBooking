@@ -5,6 +5,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#E5E5E5',
     flex: 1,
   },
+  containerHome: {
+    backgroundColor: 'white',
+    flex: 1,
+  },
   imgLogo: {
     width: 190.15,
     height: 44.87,
@@ -58,6 +62,38 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     marginTop: -18,
+  },
+  iconNotifHome: {
+    justifyContent: 'center',
+    right: 0,
+    position: 'absolute',
+    marginTop: 10,
+    marginRight: 20,
+  },
+  logoProfilHome: {
+    height: 39,
+    width: 39,
+    backgroundColor: 'white',
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  highlightHome: {
+    width: 319,
+    height: 117,
+    alignSelf: 'center',
+    marginTop: -75,
+    borderRadius: 20,
+  },
+  imgHLHome: {
+    marginTop: 12,
+    marginLeft: 16,
+  },
+  textHL: {
+    flexDirection: 'column',
+    marginLeft: 40,
+    alignItems: 'flex-end',
+    marginTop: 27,
   },
 });
 

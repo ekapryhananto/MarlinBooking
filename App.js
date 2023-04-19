@@ -16,6 +16,7 @@ import Home from './src/pages/Home';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import {Text, View} from 'react-native';
 import BottomNav from './BottomNav';
+import Imagezoom from './src/pages/tugas3/Imagezoom';
 
 const Stack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -38,6 +39,7 @@ const App = () => {
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="ResetPass" component={ResetPass} />
         <Stack.Screen name="Home" component={BottomNav} />
+        <Stack.Screen name="Imagezoom" component={Imagezoom} />
       </Stack.Navigator>
     </NavigationContainer>
   );
